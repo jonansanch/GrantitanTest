@@ -1,0 +1,16 @@
+C:\Users\Jonathan\Documents\GrantitanTest\GranTitan.BLL\bin\Debug\net8.0\GranTitan.BLL.deps.json
+C:\Users\Jonathan\Documents\GrantitanTest\GranTitan.BLL\bin\Debug\net8.0\GranTitan.BLL.dll
+C:\Users\Jonathan\Documents\GrantitanTest\GranTitan.BLL\bin\Debug\net8.0\GranTitan.BLL.pdb
+C:\Users\Jonathan\Documents\GrantitanTest\GranTitan.BLL\obj\Debug\net8.0\GranTitan.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jonathan\Documents\GrantitanTest\GranTitan.BLL\obj\Debug\net8.0\GranTitan.BLL.AssemblyInfoInputs.cache
+C:\Users\Jonathan\Documents\GrantitanTest\GranTitan.BLL\obj\Debug\net8.0\GranTitan.BLL.AssemblyInfo.cs
+C:\Users\Jonathan\Documents\GrantitanTest\GranTitan.BLL\obj\Debug\net8.0\GranTitan.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Jonathan\Documents\GrantitanTest\GranTitan.BLL\obj\Debug\net8.0\GranTitan.BLL.sourcelink.json
+C:\Users\Jonathan\Documents\GrantitanTest\GranTitan.BLL\obj\Debug\net8.0\GranTitan.BLL.dll
+C:\Users\Jonathan\Documents\GrantitanTest\GranTitan.BLL\obj\Debug\net8.0\refint\GranTitan.BLL.dll
+C:\Users\Jonathan\Documents\GrantitanTest\GranTitan.BLL\obj\Debug\net8.0\GranTitan.BLL.pdb
+C:\Users\Jonathan\Documents\GrantitanTest\GranTitan.BLL\obj\Debug\net8.0\ref\GranTitan.BLL.dll
+C:\Users\Jonathan\Documents\GrantitanTest\GranTitan.BLL\bin\Debug\net8.0\GranTitan.DAL.dll
+C:\Users\Jonathan\Documents\GrantitanTest\GranTitan.BLL\bin\Debug\net8.0\GranTitan.DAL.pdb
+C:\Users\Jonathan\Documents\GrantitanTest\GranTitan.BLL\obj\Debug\net8.0\GranTitan.BLL.csproj.AssemblyReference.cache
+C:\Users\Jonathan\Documents\GrantitanTest\GranTitan.BLL\obj\Debug\net8.0\GranTitan.BLL.csproj.CopyComplete

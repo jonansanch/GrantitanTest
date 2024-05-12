@@ -1,0 +1,6 @@
+@GranTitan_HostAddress = http://localhost:5077
+
+GET {{GranTitan_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
