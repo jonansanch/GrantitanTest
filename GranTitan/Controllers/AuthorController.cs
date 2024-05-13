@@ -1,6 +1,8 @@
 ﻿using GranTitan.BLL.Interface;
 using GranTitan.DAL.Entities;
+using GranTitan.Extensions;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace GranTitan.Controllers
 {
@@ -12,19 +14,18 @@ namespace GranTitan.Controllers
         /// Obtiene la lista de todos los autores
         /// </summary>
         /// <returns></returns>
-
         [HttpGet("[action]")]
         public async Task<IActionResult> GetList()
         {
             var lstAreaDeTrabajo = await _authorService.GetAllAsync();
-            return Ok(lstAreaDeTrabajo);
+            return Ok(lstAreaDeTrabajo.ConvertToListResponse());
         }
 
         /// <summary>
         /// Obtiene autor por id
         /// </summary>
         /// <returns></returns>
-        [HttpGet("GetAuthorId/{id}")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetUserId(Guid id)
         {
             var lst = await _authorService.GetId(id);

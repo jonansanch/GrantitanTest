@@ -4,7 +4,7 @@ namespace GranTitan.BLL.Interface
 {
     public interface IAuthorService
     {
-        Task<List<Author>> GetAllAsync();
+        Task<IEnumerable<AuthorDto>> GetAllAsync();
         Task<Author> GetId(Guid vAuthorID);
         Task<object> AddAsync(Author data);
         Task<object> UpdateAsync(Author data);

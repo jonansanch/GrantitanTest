@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GranTitan.BLL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+713e0b901d8811891ad70939fc74bbb8d8e1abee")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+00d3c4dd2c6bbdf7829443ee48832a8315bc42bf")]
 [assembly: System.Reflection.AssemblyProductAttribute("GranTitan.BLL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GranTitan.BLL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

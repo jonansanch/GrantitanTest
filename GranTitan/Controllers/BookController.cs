@@ -1,6 +1,7 @@
 ﻿using GranTitan.BLL.Interface;
 using GranTitan.BLL.Validators;
 using GranTitan.DAL.Entities;
+using GranTitan.Extensions;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GranTitan.Controllers
@@ -18,14 +19,14 @@ namespace GranTitan.Controllers
         public async Task<IActionResult> GetList()
         {
             var lstBooks = await _bookService.GetAllAsync();
-            return Ok(lstBooks);
+            return Ok(lstBooks.ConvertToListResponse());
         }
 
         /// <summary>
         /// Obtiene libro por id
         /// </summary>
         /// <returns></returns>
-        [HttpGet("GetBookId/{id}")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetUserId(Guid id)
         {
             var lst = await _bookService.GetId(id);
@@ -39,7 +40,7 @@ namespace GranTitan.Controllers
         /// <returns></returns>
         [HttpPost]
 
-        public async Task<IActionResult> Create(Book data)
+        public async Task<IActionResult> Create(BookCreateDto data)
         {            
             var result = await _bookService.AddAsync(data);
             return Ok(result);
@@ -52,7 +53,7 @@ namespace GranTitan.Controllers
         /// <returns></returns>
         [HttpPut]
 
-        public async Task<IActionResult> Update(Book data)
+        public async Task<IActionResult> Update(BookCreateDto data)
         {
             var result = await _bookService.UpdateAsync(data);
             return Ok(result);

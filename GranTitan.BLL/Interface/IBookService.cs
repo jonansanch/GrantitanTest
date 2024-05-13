@@ -4,10 +4,10 @@ namespace GranTitan.BLL.Interface
 {
     public interface IBookService
     {
-        Task<List<Book>> GetAllAsync();
+        Task<IEnumerable<BookDto>> GetAllAsync();
         Task<Book> GetId(Guid vAuthorID);
-        Task<object> AddAsync(Book data);
-        Task<object> UpdateAsync(Book data);
+        Task<object> AddAsync(BookCreateDto data);
+        Task<object> UpdateAsync(BookCreateDto data);
         Task<bool> DeleteAsync(Guid vAuthorID);
     }
 }

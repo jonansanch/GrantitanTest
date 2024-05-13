@@ -148,3 +148,5 @@ C:\Users\Jonathan\Documents\GrantitanTest\GranTitan\bin\Debug\net8.0\GranTitan.B
 C:\Users\Jonathan\Documents\GrantitanTest\GranTitan\bin\Debug\net8.0\GranTitan.BLL.pdb
 C:\Users\Jonathan\Documents\GrantitanTest\GranTitan\bin\Debug\net8.0\FluentValidation.dll
 C:\Users\Jonathan\Documents\GrantitanTest\GranTitan\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Jonathan\Documents\GrantitanTest\GranTitan\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\Jonathan\Documents\GrantitanTest\GranTitan\bin\Debug\net8.0\Newtonsoft.Json.dll

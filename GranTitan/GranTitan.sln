@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GranTitan", "GranTitan.csproj", "{34335935-2461-4C0B-8D6A-0BB5C6AD1613}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GranTitan", "GranTitan.csproj", "{34335935-2461-4C0B-8D6A-0BB5C6AD1613}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GranTitan.BLL", "..\GranTitan.BLL\GranTitan.BLL.csproj", "{FD6820E5-BFB4-45FF-9AC2-4B4FC754CF1A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GranTitan.BLL", "..\GranTitan.BLL\GranTitan.BLL.csproj", "{FD6820E5-BFB4-45FF-9AC2-4B4FC754CF1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GranTitan.DAL", "..\GranTitan.DAL\GranTitan.DAL.csproj", "{FCE6BDC2-5E56-4CC1-A8E3-897E8ABB3CA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GranTitan.DAL", "..\GranTitan.DAL\GranTitan.DAL.csproj", "{FCE6BDC2-5E56-4CC1-A8E3-897E8ABB3CA8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

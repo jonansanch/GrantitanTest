@@ -1,4 +1,5 @@
-﻿using DataAcces.BusinessExeption;
+﻿using AutoMapper;
+using DataAcces.BusinessExeption;
 using FluentValidation;
 using FluentValidation.Results;
 using GranTitan.BLL.Interface;
@@ -11,22 +12,20 @@ using System.Text.RegularExpressions;
 
 namespace GranTitan.BLL.Service
 {
-    public partial class BookService(IRepository<Book> _repositoryBook, IUnitOfWork unitOfWork, BookValidator _validations) : IBookService
+    public partial class BookService(IRepository<Book> _repositoryBook, IUnitOfWork unitOfWork, BookValidator _validations, IMapper _mapper) : IBookService
     {
-        public async Task<List<Book>> GetAllAsync()
+        public async Task<IEnumerable<BookDto>> GetAllAsync()
         {
-            List<Book> dataList = (await _repositoryBook.GetManyAsync()).ToList();
-
-            return dataList;
+            List<Book> dataList = (await _repositoryBook.GetManyAsync(includeStringProperties: "AuthorBook")).ToList();
+            return _mapper.Map<IEnumerable<Book>, List<BookDto>>(dataList);
         }
 
         public async Task<Book> GetId(Guid vBookID)
         {
-            var data = await _repositoryBook.GetOneAsync(vBookID);
-
+            var data = await _repositoryBook.GetOneAsync(vBookID, includeStringProperties: "AuthorBook");
             return data;
         }
-        public async Task<object> AddAsync(Book data)
+        public async Task<object> AddAsync(BookCreateDto data)
         {
             Validate(data);
             try
@@ -40,7 +39,9 @@ namespace GranTitan.BLL.Service
                         msg = "Ya existe un libro con la misma libreria y nombre en el sistema."
                     };
                 }
-                await _repositoryBook.AddAsync(data);
+
+                var bookDt = _mapper.Map<BookCreateDto, Book>(data);
+                await _repositoryBook.AddAsync(bookDt);
                 await unitOfWork.SaveAsync();
                 return new
                 {
@@ -61,11 +62,21 @@ namespace GranTitan.BLL.Service
             }
 
         }
-        public async Task<object> UpdateAsync(Book data)
+        public async Task<object> UpdateAsync(BookCreateDto data)
         {
             Validate(data);
             try
             {
+                if (data.Id == Guid.Empty)
+                {
+                    return new
+                    {
+                        data = false,
+                        status = "error",
+                        msg = "Datos incompletos favor revisar y volver a realizar el envio."
+                    };
+                }
+
                 if (await ExistByNameAndLibrary(data))
                 {
                     return new
@@ -75,8 +86,8 @@ namespace GranTitan.BLL.Service
                         msg = "Ya existe un libro con la misma libreria y nombre en el sistema."
                     };
                 }
-
-                _repositoryBook.UpdateAsync(data);
+                var bookDt = _mapper.Map<BookCreateDto, Book>(data);
+                _repositoryBook.UpdateAsync(bookDt);
                 await unitOfWork.SaveAsync();
                 return new
                 {
@@ -116,12 +127,12 @@ namespace GranTitan.BLL.Service
 
         }
 
-        private async Task<bool> ExistByNameAndLibrary(Book data)
+        private async Task<bool> ExistByNameAndLibrary(BookCreateDto data)
         {
             return (await _repositoryBook.GetManyAsync(x => x.Name.ToLower() == data.Name.ToLower() && x.Library.ToLower() == data.Library.ToLower())).Count() > 1 ? true : false;
         }
 
-        private void Validate(Book data)
+        private void Validate(BookCreateDto data)
         {
             ValidationResult results = _validations.Validate(data);
             if (!results.IsValid)

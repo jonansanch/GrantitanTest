@@ -3,19 +3,20 @@ using GranTitan.DAL.Entities;
 
 namespace GranTitan.BLL.Validators
 {
-    public class BookValidator : AbstractValidator<Book>
+    public class BookValidator : AbstractValidator<BookCreateDto>
     {
         public BookValidator()
         {
             RuleFor(x => x.Name)
                 .NotEmpty().WithMessage("El nombre es obligatorio")
-                .Matches(@"^[\p{L}\p{M}\s]+$")
-                .WithMessage("El nombre solo puede contener letras y espacios");
+                .NotNull().WithMessage("El nombre es obligatorio")
+                .MaximumLength(100).MinimumLength(1);
 
             RuleFor(x => x.Library)
                 .NotEmpty().WithMessage("El nombre es obligatorio")
-                .Matches(@"^[\p{L}\p{M}\s]+$")
-                .WithMessage("El nombre solo puede contener letras y espacios");
+                .MaximumLength(100).MinimumLength(1);
+            //.Matches(@"^[\p{L}\p{M}\s]+$")
+            //.WithMessage("El nombre editorial solo puede contener letras y espacios");
 
             RuleFor(x => x.Pages).NotNull().WithMessage("El número de paginas es obligatorio")
                 .GreaterThan(0).WithMessage("El número de paginas debe ser mayor que cero")

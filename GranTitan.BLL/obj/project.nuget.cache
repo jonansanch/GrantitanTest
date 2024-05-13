@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "D3Jf6LoM3kLcJ+RWhXUEurjFY3JApesPajypCDtujAYd7F41sFOixKHg4JG24RQMfCOA8uWdWXf2J6541WmTcQ==",
+  "dgSpecHash": "Fhie9Quo44WiwgNGAAdSHNVjYvVZw7+G/EczkH50haoBeBD3g1/8ZQRK4cYIg0iG6BGQLu3oFg3YsGBRVjr8XA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Jonathan\\Documents\\GrantitanTest\\GranTitan.BLL\\GranTitan.BLL.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Jonathan\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Jonathan\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Jonathan\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\Jonathan\\.nuget\\packages\\fluentvalidation\\11.9.1\\fluentvalidation.11.9.1.nupkg.sha512",
